@@ -4,7 +4,7 @@ module.exports = {
   devServer: {
     port: 8001,
     headers: {
-      'Access-Control-Allow-Origin': 'http://localhost:8000'
+      'Access-Control-Allow-Origin': 'http://10.94.14.65:8000'
     }
   },
   configureWebpack: {

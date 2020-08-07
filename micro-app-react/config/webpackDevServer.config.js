@@ -93,7 +93,7 @@ module.exports = function(proxy, allowedHost) {
     https: getHttpsConfig(),
     host,
     headers: {
-      'Access-Control-Allow-Origin': 'http://localhost:8000'
+      'Access-Control-Allow-Origin': 'http://10.94.14.65:8000'
     },
     overlay: false,
     historyApiFallback: {

@@ -6,13 +6,13 @@ export default function() {
       name: "react app",
       entry: "//localhost:8002",
       container: "#micro-app-main-container",
-      activeRule: "/react"
+      activeRule: "/home/react"
     },
     {
       name: "vue app",
       entry: "//localhost:8001",
       container: "#micro-app-main-container",
-      activeRule: "/vue"
+      activeRule: "/home/vue"
     }
   ]);
 
