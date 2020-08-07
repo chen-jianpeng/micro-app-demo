@@ -1,11 +1,6 @@
 .DS_Store
-micro-app-main/node_modules
-micro-app-vue/node_modules
-micro-app-react/node_modules
-micro-app-main/dist
-micro-app-vue/dist
-micro-app-react/dist
-
+node_modules
+/dist
 
 # local env files
 .env.local

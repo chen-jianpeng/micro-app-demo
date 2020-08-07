@@ -1,24 +1,14 @@
-# micro-app
+## 项目结构
 
-## Project setup
-```
-npm install
-```
+- 主应用
+micro-app-main
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- 子应用（vue框架）
+micro-app-vue
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- 子应用（react框架）
+micro-app-react
 
-### Lints and fixes files
-```
-npm run lint
-```
+## 访问项目
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+分别启动以上三个应用，然后访问主项目
