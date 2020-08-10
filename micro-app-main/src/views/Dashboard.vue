@@ -5,12 +5,8 @@
 </template>
 
 <script>
-import registerMicroApps from "@/registerMicroApps";
 export default {
-  name: "Dashboard",
-  mounted() {
-    registerMicroApps();
-  }
+  name: "Dashboard"
 };
 </script>
 

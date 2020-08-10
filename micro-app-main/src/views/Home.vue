@@ -9,11 +9,26 @@
 </template>
 
 <script>
-import registerMicroApps from "@/registerMicroApps";
+import { registerMicroApps, start } from "qiankun";
 export default {
   name: "Home",
   mounted() {
-    registerMicroApps();
+    registerMicroApps([
+      {
+        name: "react app",
+        entry: "//localhost:8002",
+        container: "#micro-app-main-container",
+        activeRule: "/home/react"
+      },
+      {
+        name: "vue app",
+        entry: "//localhost:8001",
+        container: "#micro-app-main-container",
+        activeRule: "/home/vue"
+      }
+    ]);
+
+    start();
   }
 };
 </script>
