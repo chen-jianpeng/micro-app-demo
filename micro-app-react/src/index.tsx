@@ -20,8 +20,7 @@ function render() {
   serviceWorker.unregister();
 }
 
-let win: any = window;
-
+const win: any = window;
 if (!win.__POWERED_BY_QIANKUN__) {
   render();
 } else {

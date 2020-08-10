@@ -5,6 +5,11 @@ module.exports = {
     port: 8001,
     headers: {
       'Access-Control-Allow-Origin': 'http://10.94.14.65:8000'
+    },
+    disableHostCheck: true,
+    overlay: {
+      warnings: false,
+      errors: true,
     }
   },
   configureWebpack: {
@@ -13,5 +18,5 @@ module.exports = {
       libraryTarget: "umd",
       jsonpFunction: `webpackJsonp_${packageName}`,
     }
-  },
+  }
 };
