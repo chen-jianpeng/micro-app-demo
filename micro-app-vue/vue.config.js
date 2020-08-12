@@ -4,19 +4,19 @@ module.exports = {
   devServer: {
     port: 8001,
     headers: {
-      'Access-Control-Allow-Origin': '*'
+      "Access-Control-Allow-Origin": "*"
     },
     disableHostCheck: true,
     overlay: {
       warnings: false,
-      errors: true,
+      errors: true
     }
   },
   configureWebpack: {
     output: {
       library: `${packageName}-[name]`,
       libraryTarget: "umd",
-      jsonpFunction: `webpackJsonp_${packageName}`,
+      jsonpFunction: `webpackJsonp_${packageName}`
     }
   }
 };

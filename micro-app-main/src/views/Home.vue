@@ -1,9 +1,5 @@
 <template>
   <div class="home">
-    <div id="nav">
-      <router-link to="/home/react">react</router-link> |
-      <router-link to="/home/vue">vue</router-link>
-    </div>
     <div id="micro-app-main-container"></div>
   </div>
 </template>
@@ -18,13 +14,13 @@ export default {
         name: "react app",
         entry: "//localhost:8002",
         container: "#micro-app-main-container",
-        activeRule: "/home/react"
+        activeRule: "/react"
       },
       {
         name: "vue app",
         entry: "//localhost:8001",
         container: "#micro-app-main-container",
-        activeRule: "/home/vue"
+        activeRule: "/vue"
       }
     ]);
 
