@@ -1,5 +1,11 @@
 import React from "react";
-import { Route, Redirect, Switch, Link } from "react-router-dom";
+import {
+  RouteComponentProps,
+  Route,
+  Redirect,
+  Switch,
+  Link,
+} from "react-router-dom";
 import { Layout, Menu } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import Dashboard from "./views/Dashboard";
@@ -7,7 +13,9 @@ import About from "./views/About";
 
 const { Content, Footer, Sider } = Layout;
 
-function App() {
+type SiderCustomProps = RouteComponentProps<any>;
+
+function App(props: SiderCustomProps) {
   return (
     <Layout>
       <Sider
@@ -16,13 +24,18 @@ function App() {
           height: "100vh",
           position: "fixed",
           left: 0,
+          background: "#fff",
         }}
       >
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={["dashboard"]}>
-          <Menu.Item key="dashboard" icon={<UserOutlined />}>
+        <Menu
+          mode="inline"
+          defaultSelectedKeys={[props.location.pathname]}
+          style={{ height: "100%" }}
+        >
+          <Menu.Item key="/dashboard" icon={<UserOutlined />}>
             <Link to={"/dashboard"}>Dashboard</Link>
           </Menu.Item>
-          <Menu.Item key="about" icon={<UserOutlined />}>
+          <Menu.Item key="/about" icon={<UserOutlined />}>
             <Link to={"/about"}>About</Link>
           </Menu.Item>
         </Menu>

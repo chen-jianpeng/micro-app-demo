@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Pages from "./Pages";
 import * as serviceWorker from "./serviceWorker";
 
-import "antd/dist/antd.css";
+import './style/antd/antd.less';
 import './style/index.less';
 
 function render() {
