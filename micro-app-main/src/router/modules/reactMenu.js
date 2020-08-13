@@ -2,12 +2,12 @@ export default {
   data: [
     {
       path: "/react/home",
-      name: " Home",
-      icon: "el-icon-house"
+      name: "REACT Home",
+      icon: "el-icon-s-home"
     },
     {
       path: "/react/about",
-      name: " About",
+      name: "REACT About",
       icon: "el-icon-info"
     }
   ]

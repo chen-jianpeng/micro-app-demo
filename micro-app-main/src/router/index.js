@@ -8,12 +8,15 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    path: "/",
+    redirect: "/dashboard"
+  },
+  {
     path: "/dashboard",
     component: () => import("@/layout/HeaderContainer"),
     children: [
       {
         path: "",
-        name: "Dashboard",
         components: {
           headbar: () => import("@/layout/components/Headbar"),
           default: () => import("@/views/Dashboard")
@@ -22,32 +25,38 @@ const routes = [
     ]
   },
   {
-    path: "/",
+    path: "/vue",
     component: () => import("@/layout/HeaderContainerAside"),
     children: [
       {
-        path: "vue/*",
+        path: ":microApp*",
         props: { sidebar: vueMenu },
         components: {
           headbar: () => import("@/layout/components/Headbar"),
           sidebar: () => import("@/layout/components/Sidebar"),
           default: () => import("@/views/Home")
         }
-      },
+      }
+    ]
+  },
+  {
+    path: "/react",
+    component: () => import("@/layout/HeaderContainerAside"),
+    children: [
       {
-        path: "react/*",
+        path: ":microApp*",
         props: { sidebar: reactMenu },
         components: {
           headbar: () => import("@/layout/components/Headbar"),
           sidebar: () => import("@/layout/components/Sidebar"),
           default: () => import("@/views/Home")
         }
-      },
-      {
-        path: "*",
-        redirect: "/dashboard"
       }
     ]
+  },
+  {
+    path: "*",
+    redirect: "/dashboard"
   }
 ];
 

@@ -24,11 +24,11 @@ export default {
           name: "Dashboard"
         },
         {
-          path: "/vue/home",
+          path: "/vue",
           name: "Vue"
         },
         {
-          path: "/react/home",
+          path: "/react",
           name: "React"
         }
       ]
@@ -53,8 +53,8 @@ export default {
     background-color: $--color-primary;
     border-radius: 4px;
   }
-}
-.header-menu {
-  border-bottom: none;
+  .header-menu {
+    border-bottom: none;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <el-container class="base-layout">
-    <el-header class="header" height="60px">
+  <el-container class="header-container">
+    <el-header height="60px">
       <router-view name="headbar"></router-view>
     </el-header>
     <el-container>
@@ -19,7 +19,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.header {
+.el-header {
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
     0 1px 10px 0 rgba(0, 0, 0, 0.12);
   z-index: 1;

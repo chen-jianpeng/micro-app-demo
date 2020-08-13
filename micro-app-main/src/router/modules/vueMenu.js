@@ -2,12 +2,12 @@ export default {
   data: [
     {
       path: "/vue/home",
-      name: " Home",
-      icon: "el-icon-house"
+      name: " VUE Home",
+      icon: "el-icon-s-home"
     },
     {
       path: "/vue/about",
-      name: " About",
+      name: "VUE About",
       icon: "el-icon-info"
     }
   ]

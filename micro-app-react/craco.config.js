@@ -1,6 +1,7 @@
 const { name } = require("./package");
 const CracoLessPlugin = require("craco-less");
 const selectorNamespace  = require('postcss-selector-namespace');
+const path = require("path")
 
 module.exports = {
   style: {
@@ -16,7 +17,9 @@ module.exports = {
     },
   },
   webpack: {
-    alias: {},
+    alias: {
+      '@': path.resolve(__dirname, "./src")
+    },
     plugins: [],
     configure: (webpackConfig, { env, paths }) => {
       webpackConfig.output.library = `${name}-[name]`;

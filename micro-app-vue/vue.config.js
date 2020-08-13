@@ -6,6 +6,7 @@ module.exports = {
     headers: {
       "Access-Control-Allow-Origin": "*"
     },
+    hot: true,
     disableHostCheck: true,
     overlay: {
       warnings: false,
