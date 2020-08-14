@@ -9,6 +9,6 @@ micro-app-vue
 - 子应用（react框架）
 micro-app-react
 
-## 访问项目
+## 文档地址
 
-分别启动以上三个应用，然后访问主项目
+[文档地址](https://www.yuque.com/docs/share/3dcaf88b-cfd3-45e6-8b8b-2efa86686e33)
