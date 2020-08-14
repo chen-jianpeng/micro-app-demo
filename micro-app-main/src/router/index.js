@@ -66,4 +66,17 @@ const router = new VueRouter({
   routes
 });
 
+// 解决子项目切换到主项目后样式丢失的问题
+const childRoute = ["/vue", "/react"];
+const isChildRoute = path => childRoute.some(item => path.startsWith(item));
+const rawAppendChild = HTMLHeadElement.prototype.appendChild;
+const rawAddEventListener = window.addEventListener;
+router.beforeEach((to, from, next) => {
+  if (isChildRoute(from.path) && !isChildRoute(to.path)) {
+    HTMLHeadElement.prototype.appendChild = rawAppendChild;
+    window.addEventListener = rawAddEventListener;
+  }
+  next();
+});
+
 export default router;
