@@ -6,15 +6,19 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    redirect: "/home"
+    redirect: "/vue/home"
   },
   {
-    path: "/home",
+    path: "/vue",
+    redirect: "/vue/home"
+  },
+  {
+    path: "/vue/home",
     name: "Home",
     component: () => import("../views/Home.vue")
   },
   {
-    path: "/about",
+    path: "/vue/about",
     name: "About",
     component: () => import("../views/About.vue")
   }
@@ -22,7 +26,6 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
-  base: window.__POWERED_BY_QIANKUN__ ? "/vue" : process.env.BASE_URL,
   routes
 });
 

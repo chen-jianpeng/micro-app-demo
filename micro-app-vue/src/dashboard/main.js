@@ -1,8 +1,6 @@
-import "./public-path";
+import "../public-path";
 import Vue from "vue";
 import App from "./App.vue";
-import router from "./router";
-import store from "./store";
 
 let instance = null;
 
@@ -10,10 +8,8 @@ function render() {
   Vue.config.productionTip = false;
 
   instance = new Vue({
-    router,
-    store,
     render: h => h(App)
-  }).$mount("#micro-app-vue");
+  }).$mount("#micro-app-vue-dashboard");
 }
 
 if (!window.__POWERED_BY_QIANKUN__) {
