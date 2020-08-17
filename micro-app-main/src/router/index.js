@@ -55,6 +55,19 @@ const routes = [
     ]
   },
   {
+    path: "/setting",
+    component: () => import("@/layout/HeaderContainer"),
+    children: [
+      {
+        path: "",
+        components: {
+          headbar: () => import("@/layout/components/Headbar"),
+          default: () => import("@/views/Setting")
+        }
+      }
+    ]
+  },
+  {
     path: "*",
     redirect: "/dashboard"
   }
@@ -62,7 +75,6 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
   routes
 });
 

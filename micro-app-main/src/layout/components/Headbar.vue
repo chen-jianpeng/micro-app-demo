@@ -30,6 +30,10 @@ export default {
         {
           path: "/react",
           name: "React"
+        },
+        {
+          path: "/setting",
+          name: "Setting"
         }
       ]
     };
