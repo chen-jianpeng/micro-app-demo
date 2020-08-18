@@ -41,7 +41,7 @@ export default {
   computed: {
     activeIndex() {
       let nav = this.navs.find(nav => {
-        return this.$route.path.includes(nav.path);
+        return this.$route.path.startsWith(nav.path);
       });
       return nav ? nav.path : "";
     }
