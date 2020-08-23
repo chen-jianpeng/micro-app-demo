@@ -91,9 +91,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "postcss-selector-namespace": "^3.0.1"
-  },
+  "devDependencies": {},
   "jest": {
     "roots": [
       "<rootDir>/src"

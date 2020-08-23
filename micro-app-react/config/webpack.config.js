@@ -106,9 +106,9 @@ module.exports = function(webpackEnv) {
             // so that it honors browserslist config in package.json
             // which in turn let's users customize the target behavior as per their needs.
             postcssNormalize(),
-            require("postcss-selector-namespace")({
-              namespace: ".micro-app-react-wrap",
-            })
+            // require("postcss-selector-namespace")({
+            //   namespace: ".micro-app-react-wrap",
+            // })
           ],
           sourceMap: isEnvProduction && shouldUseSourceMap,
         },

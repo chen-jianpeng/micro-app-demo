@@ -1,19 +1,19 @@
-import "../public-path"
+import "../public-path";
 import React from "react";
 import ReactDOM from "react-dom";
 import Pages from "./Pages";
 import * as serviceWorker from "./serviceWorker";
 
+import { ConfigProvider } from "antd";
+
 import "@/style/antd/antd.less";
 import "@/index/assets/style/index.less";
 
-console.log(document.getElementById("micro-app-react"));
-
 function render() {
   ReactDOM.render(
-    <React.StrictMode>
+    <ConfigProvider prefixCls="mr-antd">
       <Pages />
-    </React.StrictMode>,
+    </ConfigProvider>,
     document.getElementById("micro-app-react")
   );
 

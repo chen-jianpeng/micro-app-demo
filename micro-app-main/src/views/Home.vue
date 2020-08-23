@@ -12,13 +12,13 @@ export default {
     registerMicroApps([
       {
         name: "reactApp",
-        entry: "//localhost:8002",
+        entry: "//localhost:8002/index.html",
         container: "#micro-app-main-container",
         activeRule: "/react"
       },
       {
         name: "vueApp",
-        entry: "//localhost:8001",
+        entry: "//localhost:8001/index.html",
         container: "#micro-app-main-container",
         activeRule: "/vue"
       }

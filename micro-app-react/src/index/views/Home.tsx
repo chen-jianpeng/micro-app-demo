@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import "@/index/assets/style/home.less";
+import "../assets/style/home.less";
 import logo from "../assets/logo.svg";
+
+import DemoDialog from "../components/DemoDialog";
 
 class Home extends Component {
   render() {
@@ -19,6 +21,7 @@ class Home extends Component {
           >
             Learn React
           </a>
+          <DemoDialog></DemoDialog>
         </header>
       </div>
     );

@@ -17,7 +17,7 @@ if (!window.__POWERED_BY_QIANKUN__) {
 }
 
 export async function bootstrap() {
-  console.log("vue app bootstraped");
+  console.log("vue dashboard bootstraped");
 }
 
 export async function mount(props) {
