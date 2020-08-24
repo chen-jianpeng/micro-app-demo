@@ -4,12 +4,13 @@ import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
 
 import "@/style/antd/antd.less";
+import { ConfigProvider } from "antd";
 
 function render() {
   ReactDOM.render(
-    <React.StrictMode>
+    <ConfigProvider prefixCls="mr-antd">
       <h1>This is an react dashboard widget</h1>
-    </React.StrictMode>,
+    </ConfigProvider>,
     document.getElementById("micro-app-react-dashboard")
   );
 

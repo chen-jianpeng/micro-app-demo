@@ -11,22 +11,27 @@
 import { loadMicroApp } from "qiankun";
 export default {
   name: "Dashboard",
-  mounted() {
+  async mounted() {
     const vueDashboard = this.$refs.vueDashboard;
     const reactDashboard = this.$refs.reactDashboard;
 
-    this.vueDashboardApp = loadMicroApp({
-      name: "vueDashboard",
-      entry: "//localhost:8001/dashboard.html",
-      container: vueDashboard,
-      props: { name: "qiankun" }
-    });
-    this.reactDashboardApp = loadMicroApp({
-      name: "reactDashboard",
-      entry: "//localhost:8002/dashboard.html",
-      container: reactDashboard,
-      props: { name: "qiankun" }
-    });
+    this.vueDashboardApp = loadMicroApp(
+      {
+        name: "vueDashboard",
+        entry: "//localhost:8001/dashboard.html",
+        container: vueDashboard
+      },
+      { singular: false }
+    );
+
+    this.reactDashboardApp = loadMicroApp(
+      {
+        name: "reactDashboard",
+        entry: "//localhost:8002/dashboard.html",
+        container: reactDashboard
+      },
+      { singular: false }
+    );
   },
   updated() {
     this.vueDashboardApp.update({ name: "kuitos" });
