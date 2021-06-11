@@ -8,7 +8,7 @@ import { ConfigProvider } from "antd";
 
 function render() {
   ReactDOM.render(
-    <ConfigProvider prefixCls="mr-antd">
+    <ConfigProvider>
       <h1>This is an react dashboard widget</h1>
     </ConfigProvider>,
     document.getElementById("micro-app-react-dashboard")

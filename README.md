@@ -1,13 +1,13 @@
 ## 项目结构
 
 - 主应用
-micro-app-main
+  micro-app-main
 
-- 子应用（vue框架）
-micro-app-vue
+- 子应用（vue 框架）
+  micro-app-vue
 
-- 子应用（react框架）
-micro-app-react
+- 子应用（react 框架）
+  micro-app-react(yarn)
 
 ## 文档地址
 

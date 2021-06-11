@@ -7,11 +7,12 @@ import * as serviceWorker from "./serviceWorker";
 import { ConfigProvider } from "antd";
 
 import "@/style/antd/antd.less";
+import "@/style/antd/custom-base.less";
 import "@/index/assets/style/index.less";
 
 function render() {
   ReactDOM.render(
-    <ConfigProvider prefixCls="mr-antd">
+    <ConfigProvider>
       <Pages />
     </ConfigProvider>,
     document.getElementById("micro-app-react")
